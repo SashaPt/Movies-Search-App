@@ -1,15 +1,15 @@
 <div class="wrapper">
   <div class="input-container container">
     <div>Title:</div>
-    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-form-field class="example-full-width" >
       <mat-label></mat-label>
-      <input matInput placeholder="" value="" />
+      <input matInput [(ngModel)]="inputValue"/>
     </mat-form-field>
   </div>
   <div class="select-container container">
     <div>Type:</div>
-    <mat-form-field appearance="fill">
-      <mat-label>Movie</mat-label>
+    <mat-form-field>
+      <mat-label></mat-label>
       <mat-select [(ngModel)]="selectedValue" name="film">
         <mat-option *ngFor="let film of films" [value]="film.value">
           {{ film.viewValue }}
@@ -18,6 +18,6 @@
     </mat-form-field>
   </div>
   <div class="button-container">
-    <button mat-raised-button>Search</button>
+    <button mat-raised-button (click)="getMoviesByTitle(inputValue)">Search</button>
   </div>
 </div>

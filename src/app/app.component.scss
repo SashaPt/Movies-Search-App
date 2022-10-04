@@ -10,3 +10,11 @@
     text-align: center;
   }
 }
+.movies-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 20px;
+}

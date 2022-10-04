@@ -1,9 +1,11 @@
 <div class="movie-container">
-  <div class="movie-img"></div>
+  <div class="movie-img">
+    <img [src]="movie.Poster" alt="movie-poster">
+  </div>
   <div class="movie-info">
-    <p class="type">movie</p>
-    <p class="title">some title</p>
-    <p class="year">2015</p>
+    <p class="type">{{movie.Type}}</p>
+    <p class="title">{{movie.Title}}</p>
+    <p class="year">{{movie.Year}}</p>
     <button mat-raised-button>Details</button>
   </div>
 </div>

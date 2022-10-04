@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { IFilm } from 'src/app/shared/model/movie.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IFilm, IMovie } from 'src/app/shared/model/movie.model';
 
 @Component({
   selector: 'app-components',
@@ -7,8 +7,12 @@ import { IFilm } from 'src/app/shared/model/movie.model';
   styleUrls: ['./components.component.scss'],
 })
 export class ComponentsComponent implements OnInit {
+  @Input() movie!: IMovie;
+  @Output() onClick = new EventEmitter<string>();
+  inputValue: string = '';
   selectedValue!: string;
-  selectedCar!: string;
+  
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -18,4 +22,7 @@ export class ComponentsComponent implements OnInit {
     { value: 'series', viewValue: 'series' },
     { value: 'episode', viewValue: 'episode' },
   ];
+  getMoviesByTitle(title: string) {
+    this.onClick.emit(title);
+  }
 }
