@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+  row-gap: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: auto;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  mat-form-field {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    padding: 2px;
+  }
+}
+.button-container {
+  width: 100%;
+}
+button {
+  display: block;
+  width: 100%;
+}

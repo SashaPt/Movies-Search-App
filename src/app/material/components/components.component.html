@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="input-container container">
+    <div>Title:</div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label></mat-label>
+      <input matInput placeholder="" value="" />
+    </mat-form-field>
+  </div>
+  <div class="select-container container">
+    <div>Type:</div>
+    <mat-form-field appearance="fill">
+      <mat-label>Movie</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="film">
+        <mat-option *ngFor="let film of films" [value]="film.value">
+          {{ film.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="button-container">
+    <button mat-raised-button>Search</button>
+  </div>
+</div>
