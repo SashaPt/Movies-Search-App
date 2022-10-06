@@ -1,0 +1,30 @@
+<div class="main-container">
+  <h2>Search:</h2>
+  <div class="wrapper">
+    <div class="input-container container">
+      <div>Title:</div>
+      <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input matInput [(ngModel)]="inputValue" />
+      </mat-form-field>
+    </div>
+    <div class="select-container container">
+      <div>Type:</div>
+      <mat-form-field>
+        <mat-label></mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="type">
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{ type.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="button-container">
+      <button mat-raised-button (click)="getMovies()">Search</button>
+    </div>
+  </div>
+  <h2 *ngIf="movies.length">Films:</h2>
+  <div class="movies-container">
+    <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
+  </div>
+</div>

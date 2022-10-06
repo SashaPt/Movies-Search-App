@@ -1,11 +1,16 @@
 <div class="movie-container">
   <div class="movie-img">
-    <img [src]="movie.Poster" alt="movie-poster">
+    <img
+      [src]="
+        movie.Poster !== 'N/A' ? movie.Poster : '../../assets/images/poster.jpg'
+      "
+      alt="movie-poster"
+    />
   </div>
   <div class="movie-info">
-    <p class="type">{{movie.Type}}</p>
-    <p class="title">{{movie.Title}}</p>
-    <p class="year">{{movie.Year}}</p>
-    <button mat-raised-button>Details</button>
+    <p class="type">{{ movie.Type }}</p>
+    <p class="title">{{ movie.Title }}</p>
+    <p class="year">{{ movie.Year }}</p>
+    <button mat-raised-button (click)="getMovieInfo()">Details</button>
   </div>
 </div>

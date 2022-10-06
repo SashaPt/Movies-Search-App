@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>{{ data.Title }}</h1>
+<div class="movie-container">
+  <div class="movie-img">
+    <img
+      [src]="
+        data.Poster !== 'N/A' ? data.Poster : '../../assets/images/poster.jpg'
+      "
+      alt="movie-poster"
+    />
+  </div>
+  <div class="movie-info">
+    <p mat-dialog-content><b>Actors:</b> {{ data.Actors }}</p>
+    <p mat-dialog-content><b>Awards:</b> {{ data.Awards }}</p>
+    <p mat-dialog-content><b>Country:</b> {{ data.Country }}</p>
+    <p mat-dialog-content><b>Type:</b> {{ data.Type }}</p>
+    <p mat-dialog-content><b>Genre:</b> {{ data.Genre }}</p>
+    <p mat-dialog-content><b>Language:</b> {{ data.Language }}</p>
+    <p mat-dialog-content><b>Writer:</b> {{ data.Writer }}</p>
+    <p mat-dialog-content><b>Year:</b> {{ data.Year }}</p>
+    <p mat-dialog-content><b>Runtime:</b> {{ data.Runtime }}</p>
+    <p mat-dialog-content><b>Plot:</b> {{ data.Plot }}</p>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

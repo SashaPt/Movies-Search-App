@@ -1,10 +1,3 @@
 <div class="main-container">
-  <div class="search-container">
-    <h2>Search:</h2>
-    <app-components (onClick)="getMoviesByTitle($event)"></app-components>
-  </div>
-  <h2>Films:</h2>
-  <div class="movies-container">
-    <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
-  </div>
+  <app-search></app-search>
 </div>
