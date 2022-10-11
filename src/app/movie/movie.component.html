@@ -11,6 +11,8 @@
     <p class="type">{{ movie.Type }}</p>
     <p class="title">{{ movie.Title }}</p>
     <p class="year">{{ movie.Year }}</p>
-    <button mat-raised-button (click)="getMovieInfo()">Details</button>
+    <button mat-raised-button (click)="getMovieInfo()" [disabled]="isLoading">
+      Details
+    </button>
   </div>
 </div>

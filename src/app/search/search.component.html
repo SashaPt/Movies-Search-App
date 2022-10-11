@@ -20,11 +20,20 @@
       </mat-form-field>
     </div>
     <div class="button-container">
-      <button mat-raised-button (click)="getMovies()">Search</button>
+      <button mat-raised-button (click)="getMovies(true)" [disabled]="!inputValue">Search</button>
     </div>
   </div>
   <h2 *ngIf="movies.length">Films:</h2>
   <div class="movies-container">
     <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
   </div>
+  <mat-paginator
+    *ngIf="movies?.length"
+    [length]="totalPages"
+    [pageSize]="10"
+    [pageIndex]="pageIndex"
+    (page)="handlePageEvent($event)"
+    aria-label="Select page"
+  >
+  </mat-paginator>
 </div>

@@ -1,6 +1,20 @@
+* {
+  box-sizing: border-box;
+}
 .container {
-    background-color: burlywood;
+  background-color: burlywood;
 }
 .movie-container {
-    display: flex;
+  display: flex;
+  .movie-info {
+    max-width: 600px;
+    p {
+      width: 100%;
+      display: flex;
+    }
+    b {
+      flex-shrink: 0;
+      width: 100px;
+    }
+  }
 }

@@ -12,9 +12,13 @@ const API_URL = 'http://www.omdbapi.com';
 export class MovieService {
   constructor(private httpClient: HttpClient) {}
 
-  getMoviesByTitle(title: string, type: string): Observable<IResult> {
+  getMoviesByTitle(
+    title: string,
+    type: string,
+    pageNumber: number
+  ): Observable<IResult> {
     return this.httpClient.get<IResult>(
-      `${API_URL}/?s=${title}&type=${type}&apikey=${API_KEY}`
+      `${API_URL}/?s=${title}&type=${type}&page=${pageNumber}&apikey=${API_KEY}`
     );
   }
   getMovieById(id: string): Observable<IMovieInfo> {
