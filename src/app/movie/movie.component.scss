@@ -1,5 +1,4 @@
 .movie-container {
-  width: 350px;
   height: auto;
   border: 1px solid lightgray;
   border-radius: 6px;
@@ -22,5 +21,11 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 30px 60px auto 40px;
+  }
+}
+@media (max-width: 480px) {
+  .movie-container {
+    width: 90%;
+    margin: auto;
   }
 }
