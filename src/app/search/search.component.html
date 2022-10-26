@@ -23,12 +23,12 @@
       <button mat-raised-button (click)="getMovies(true)" [disabled]="!inputValue">Search</button>
     </div>
   </div>
-  <h2 *ngIf="movies.length">Films:</h2>
-  <div class="movies-container">
+  <h2 *ngIf="movies.length && !isError">Films:</h2>
+  <div class="movies-container" *ngIf="!isError">
     <app-movie [movie]="movie" *ngFor="let movie of movies"></app-movie>
   </div>
   <mat-paginator
-    *ngIf="movies?.length"
+    *ngIf="movies?.length && !isError"
     [length]="totalPages"
     [pageSize]="10"
     [pageIndex]="pageIndex"
@@ -36,4 +36,5 @@
     aria-label="Select page"
   >
   </mat-paginator>
+  <app-error *ngIf="isError"></app-error>
 </div>

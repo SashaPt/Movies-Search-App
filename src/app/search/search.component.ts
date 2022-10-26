@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   selectedValue: string = 'Movie';
   totalPages: number = 0;
   pageIndex: number = 0;
+  isError: boolean =false;
 
   constructor(private movieService: MovieService) {}
 
@@ -32,9 +33,11 @@ export class SearchComponent implements OnInit {
       .subscribe((data) => {
         if (data.Response === 'False') {
           this.movies = [];
+          this.isError = true;
           return;
         }
         this.movies = data.Search;
+        this.isError = false;
         this.totalPages = Number(data.totalResults);
       });
   }

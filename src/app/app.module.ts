@@ -15,6 +15,7 @@ import { MovieComponent } from './movie/movie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from './dialog/dialog.component';
 import { SearchComponent } from './search/search.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SearchComponent } from './search/search.component';
     MovieComponent,
     DialogComponent,
     SearchComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
