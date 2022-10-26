@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { IMovieInfo, IResult } from '../model/movie.model';
 
 const API_KEY = 'bfdcab46';
-const API_URL = 'http://www.omdbapi.com';
+const API_URL = 'https://www.omdbapi.com';
 
 @Injectable({
   providedIn: 'root',
