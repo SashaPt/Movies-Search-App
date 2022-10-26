@@ -53,15 +53,17 @@ h1 {
     flex-direction: column;
     .movie-img {
       width: 90%;
-      margin: auto; 
     }
     .movie-info {
       width: 100%;
+      p {
+        flex-direction: column;
+      }
       b {
-        width: 35%;
+        width: 100%;
       }
       span {
-        width: 65%;
+        width: 100%;
       }
     }
   }

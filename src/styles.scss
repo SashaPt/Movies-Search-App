@@ -16,8 +16,15 @@ body {
 .mat-dialog-container {
   background-color: rgb(247, 210, 162);
 }
+.cdk-overlay-container {
+  overflow-y: auto;
+  background: rgba(0,0,0,.32);
+}
+.cdk-overlay-dark-backdrop {
+  background: transparent;
+}
 @media (max-width: 480px) {
   .mat-paginator-page-size {
-    display: none!important;
+    display: none !important;
   }
 }
