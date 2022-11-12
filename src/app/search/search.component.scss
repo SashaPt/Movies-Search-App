@@ -6,7 +6,7 @@
 .wrapper {
   width: 80%;
   max-width: 500px;
-  margin: 10px auto;
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -47,11 +47,13 @@ button {
   column-gap: 20px;
   margin-bottom: 15px;
   app-movie {
-    width: 350px;
+    min-width: 400px;
   }
 }
 h2 {
   text-align: center;
+  text-shadow: 0 0 5px white;
+  margin: 10px auto;
 }
 mat-paginator {
   border-radius: 6px;

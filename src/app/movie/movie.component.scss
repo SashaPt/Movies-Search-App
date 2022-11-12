@@ -6,14 +6,16 @@
   display: flex;
   align-items: stretch;
   column-gap: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
   .movie-img {
     width: 150px;
     height: 220px;
-    overflow: hidden;
     flex-shrink: 0;
     img {
+      border-radius: 6px;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
   .movie-info {

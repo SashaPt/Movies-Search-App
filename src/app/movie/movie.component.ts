@@ -24,7 +24,8 @@ export class MovieComponent implements OnInit {
         this.movieInfo = data;
         this.dialog.open(DialogComponent, {
           data: this.movieInfo,
-        });
+          maxHeight: '95vh'
+        }).updateSize('auto', 'auto');
         this.isLoading = false;
       });
   }

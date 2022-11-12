@@ -3,25 +3,23 @@
   margin: 0;
   padding: 0;
 }
-html,
 body {
   height: 100%;
-}
-body {
+  min-height: 100vh;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: calc(14px + 2 * (100vw/1280));
   box-sizing: border-box;
-  background-color: beige;
+  background: linear-gradient(rgb(194, 119, 255), rgb(236, 175, 248));
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .mat-dialog-container {
-  background-color: rgb(247, 210, 162);
-}
-.cdk-overlay-container {
-  overflow-y: auto;
-  background: rgba(0,0,0,.32);
-}
-.cdk-overlay-dark-backdrop {
-  background: transparent;
+  background: linear-gradient(45deg, rgb(82, 186, 255),rgb(255, 143, 236));
+  //color: ;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.2);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 @media (max-width: 480px) {
   .mat-paginator-page-size {
