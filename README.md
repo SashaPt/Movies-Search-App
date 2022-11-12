@@ -10,6 +10,7 @@ My Weather App was created by using <a href='http://www.omdbapi.com'>The Open Mo
 - Search panel - to write title;
 - Search options - to choose type;
 - Results of searching - items with short information about movie;
+- Pagination;
 - Dialog window with detail information about movie;
 - Error page - to show, that request failed (for example, due to incorrect title).
 
