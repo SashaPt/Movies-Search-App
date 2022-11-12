@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   selectedValue: string = 'Movie';
   totalPages: number = 0;
   pageIndex: number = 0;
-  isError: boolean =false;
+  isError: boolean = false;
 
   constructor(private movieService: MovieService) {}
 
